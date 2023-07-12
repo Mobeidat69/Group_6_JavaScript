@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<script>
+   function shorterString(str1, str2, str3, str4, str5) {
+  let shortestString = str1;
+
+  if (str2.length < shortestString.length) {
+    shortestString = str2;
+  }
+  if (str3.length < shortestString.length) {
+    shortestString = str3;
+  }
+  if (str4.length < shortestString.length) {
+    shortestString = str4;
+  }
+  if (str5.length < shortestString.length) {
+    shortestString = str5;
+  }
+
+  return shortestString;
+}
+
+var a = shorterString(str1, str2, str3, str4, str5)
+console.log(a);
+
+</script>
+
+</body>
+</html>

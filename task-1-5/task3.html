@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="author" content="Anas Yasien">
+    <meta name="description" content="10-07- Group Tasks">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas yasien</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function calculateSupply(age, amountPerDay) {
+        var maxAge = 100;
+        var amountPerYear = amountPerDay * 365.25; // accounting for leap years
+        var yearsRemaining = maxAge - age;
+        var amountNeeded = amountPerYear * yearsRemaining;
+
+        var message =
+            "You will need " +
+            amountNeeded +
+            " cups of tea to last you until the ripe old age of " +
+            maxAge;
+        return message;
+    }
+
+    console.log(calculateSupply(30, 3));
+</script>
+
+</html>
