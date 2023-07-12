@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Number Function</title>
+  
+</head>
+<body>
+  <h1>Random Number Function</h1>
+  <button onclick="generateRandomNumber()">Generate Random Number</button>
+  <p id="randomNumberOutput"></p>
+  <script>
+    function randomNumber() {
+      return Math.random();
+    }
+
+    function generateRandomNumber() {
+      var randomNum = randomNumber();
+      var output = document.getElementById("randomNumberOutput");
+      output.textContent = "Random Number: " + randomNum;
+    }
+  </script>
+</body>
+</html>

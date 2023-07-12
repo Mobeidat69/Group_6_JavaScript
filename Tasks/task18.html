@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Full Name Function</title>
+  
+</head>
+<body>
+  <h1>Full Name Function</h1>
+  <label for="firstNameInput">First Name:</label>
+  <input type="text" id="firstNameInput">
+  <label for="lastNameInput">Last Name:</label>
+  <input type="text" id="lastNameInput">
+  <button onclick="displayFullName()">Display Full Name</button>
+  <p id="fullNameOutput"></p>
+  <script>
+    function fullName(firstName, lastName) {
+      return `${firstName} ${lastName}`;
+    }
+
+    function displayFullName() {
+      var firstName = document.getElementById("firstNameInput").value;
+      var lastName = document.getElementById("lastNameInput").value;
+      var fullNameResult = fullName(firstName, lastName);
+      var output = document.getElementById("fullNameOutput");
+      output.textContent = "Full Name: " + fullNameResult;
+    }
+  </script>
+</body>
+</html>
