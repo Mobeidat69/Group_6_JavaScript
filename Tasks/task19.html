@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Average Function</title>
+</head>
+<body>
+  <h1>Average Function</h1>
+  <label for="num1Input">Number 1:</label>
+  <input type="number" id="num1Input">
+  <label for="num2Input">Number 2:</label>
+  <input type="number" id="num2Input">
+  <label for="num3Input">Number 3:</label>
+  <input type="number" id="num3Input">
+  <label for="num4Input">Number 4:</label>
+  <input type="number" id="num4Input">
+  <label for="num5Input">Number 5:</label>
+  <input type="number" id="num5Input">
+  <button onclick="calculateAverage()">Calculate Average</button>
+  <p id="averageOutput"></p>
+
+  <script>
+    function average(num1, num2, num3, num4, num5) {
+      var sum = num1 + num2 + num3 + num4 + num5;
+      return sum / 5;
+    }
+
+    function calculateAverage() {
+      var num1 = parseInt(document.getElementById("num1Input").value);
+      var num2 = parseInt(document.getElementById("num2Input").value);
+      var num3 = parseInt(document.getElementById("num3Input").value);
+      var num4 = parseInt(document.getElementById("num4Input").value);
+      var num5 = parseInt(document.getElementById("num5Input").value);
+      
+      var averageResult = average(num1, num2, num3, num4, num5);
+      var output = document.getElementById("averageOutput");
+      output.textContent = "Average: " + averageResult;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>isOdd Function</title>
+  
+</head>
+<body>
+  <h1>isOdd Function</h1>
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" id="numberInput">
+  <button onclick="checkNumber()">Check</button>
+  <p id="resultOutput"></p>
+  <script>
+    function isOdd(number) {
+      return number % 2 !== 0;
+    }
+    
+    function checkNumber() {
+      var input = document.getElementById("numberInput").value;
+      var result = isOdd(parseInt(input));
+      var output = document.getElementById("resultOutput");
+      output.textContent = result ? "The number is odd." : "The number is even.";
+    }
+  </script>
+</body>
+</html>

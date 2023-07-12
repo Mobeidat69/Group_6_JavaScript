@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Positive Function</title>
+  
+</head>
+<body>
+  <h1>Positive Function</h1>
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" id="numberInput">
+  <button onclick="calculatePositive()">Calculate</button>
+  <p id="resultOutput"></p>
+  <script>
+    function positive(number) {
+      return Math.abs(number);
+    }
+
+    function calculatePositive() {
+      var input = document.getElementById("numberInput").value;
+      var result = positive(parseInt(input));
+      var output = document.getElementById("resultOutput");
+      output.textContent = "Positive version: " + result;
+    }
+  </script>
+</body>
+</html>
