@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter Function with Reset</title>
+  
+</head>
+<body>
+  <h1>Counter Function with Reset</h1>
+  <button onclick="incrementCounter()">Increment Counter</button>
+  <p id="counterOutput"></p>
+  <button onclick="resetCounter()">Reset Counter</button>
+  <p id="resetOutput"></p>
+  <script>
+  let counter = createCounter();
+
+  function createCounter() {
+    let count = 0;
+    
+    return function() {
+      count++;
+      return count;
+    };
+  }
+
+  function incrementCounter() {
+    var output = document.getElementById("counterOutput");
+    output.textContent = "Counter: " + counter();
+  }
+
+  function resetCounter() {
+    var prevValue = counter();
+    var output = document.getElementById("resetOutput");
+    output.textContent = "Counter reset. Previous value: " + prevValue;
+    counter = createCounter();
+  }
+</script>
+</body>
+</html>

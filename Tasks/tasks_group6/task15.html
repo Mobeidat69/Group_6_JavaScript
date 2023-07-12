@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>isEven Function</title>
+  
+</head>
+<body>
+  <h1>isEven Function</h1>
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" id="numberInput">
+  <button onclick="checkNumber()">Check</button>
+  <p id="resultOutput"></p>
+  <script>
+    function isEven(number) {
+      return number % 2 === 0 ? true : false;
+    }
+
+    function checkNumber() {
+      var input = document.getElementById("numberInput").value;
+      var result = isEven(parseInt(input));
+      var output = document.getElementById("resultOutput");
+      output.textContent = "Is Even? " + result;
+    }
+  </script>
+</body>
+</html>

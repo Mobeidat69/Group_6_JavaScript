@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter Function</title>
+  
+</head>
+<body>
+  <h1>Counter Function</h1>
+  <button onclick="incrementCounter()">Increment Counter</button>
+  <p id="counterOutput"></p>
+  <script>
+    function createCounter() {
+      let counter = 0;
+      
+      return function() {
+        counter++;
+        return counter;
+      };
+    }
+
+    const counter = createCounter();
+
+    function incrementCounter() {
+      var output = document.getElementById("counterOutput");
+      output.textContent = "Counter: " + counter();
+    }
+  </script>
+</body>
+</html>
