@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function longerString(str1, str2, str3, str4){
+            let longerString = str1;
+        if (str2.length > longerString.length) {
+            longerString = str2;
+         }
+        if (str3.length > longerString.length) {
+            longerString = str3;
+             }
+            if (str4.length > longerString.length) {
+                longerString = str4;
+             }
+             return longerString;
+        }
+
+        var v = longerString(str1, str2, str3, str4);
+        console.log(v);
+    </script>
+</body>
+</html>
