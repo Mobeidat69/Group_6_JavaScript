@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Middle of Array</title>
+  
+</head>
+<body>
+  <h1>Middle of Array</h1>
+  <p>Open the browser console to see the result.</p>
+  <script>
+    function middleOfArray(array) {
+      const length = array.length;
+
+      if (length === 0) {
+        return undefined; // Return undefined if the array is empty
+      }
+
+      if (length % 2 === 1) {
+        // Array has odd number of elements
+        const middleIndex = Math.floor(length / 2);
+        return array[middleIndex];
+      } else {
+        // Array has even number of elements
+        const middleIndex1 = length / 2 - 1;
+        const middleIndex2 = length / 2;
+        return [array[middleIndex1], array[middleIndex2]];
+      }
+    }
+
+    // Example usage:
+    const array1 = [1, 2, 3, 4, 5];
+    console.log("Middle of array1:", middleOfArray(array1));
+
+    const array2 = [1, 2, 3, 4];
+    console.log("Middle of array2:", middleOfArray(array2));
+  </script>
+</body>
+</html>

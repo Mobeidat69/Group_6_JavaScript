@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Last Element of Array</title>
+  
+</head>
+<body>
+  <h1>Last Element of Array</h1>
+  <p>Open the browser console to see the result.</p>
+  <script>
+    function lastOfArray(array) {
+      if (Array.isArray(array) && array.length > 0) {
+        return array[array.length - 1];
+      } else {
+        return undefined; // Return undefined if the array is empty or not an array
+      }
+    }
+    
+    // Example usage:
+    var myArray = [1, 2, 3, 4, 5];
+    var lastElement = lastOfArray(myArray);
+    console.log("Last Element:", lastElement);
+  </script>
+</body>
+</html>

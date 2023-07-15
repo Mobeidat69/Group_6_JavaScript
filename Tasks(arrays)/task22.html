@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Even Number at Even Index</title>
+ 
+</head>
+<body>
+  <h1>Even Number at Even Index</h1>
+  <p>Open the browser console to see the results.</p>
+  <script>
+    // Using a for loop
+    function evenNumberEvenIndexForLoop(nums) {
+      const result = [];
+
+      for (let i = 0; i < nums.length; i += 2) {
+        if (nums[i] % 2 === 0) {
+          result.push(nums[i]);
+        }
+      }
+
+      return result;
+    }
+
+    // Using a while loop
+    function evenNumberEvenIndexWhileLoop(nums) {
+      const result = [];
+      let i = 0;
+
+      while (i < nums.length) {
+        if (i % 2 === 0 && nums[i] % 2 === 0) {
+          result.push(nums[i]);
+        }
+        i++;
+      }
+
+      return result;
+    }
+
+    // Example usage with for loop
+    var nums1 = [5, 2, 2, 1, 8, 66, 55, 77, 34, 9, 55, 1];
+    console.log("Using for loop:", evenNumberEvenIndexForLoop(nums1));
+
+    // Example usage with while loop
+    var nums2 = [5, 2, 2, 1, 8, 66, 55, 77, 34, 9, 55, 1];
+    console.log("Using while loop:", evenNumberEvenIndexWhileLoop(nums2));
+  </script>
+</body>
+</html>

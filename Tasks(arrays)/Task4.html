@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>First Element of Array</title>
+  
+</head>
+<body>
+  <h1>First Element of Array</h1>
+  <p>Open the browser console to see the result.</p>
+  <script>
+    function firstOfArray(array) {
+      if (Array.isArray(array) && array.length > 0) {
+        return array[0];
+      } else {
+        return undefined; // Return undefined if the array is empty or not an array
+      }
+    }
+    
+    // Example usage:
+    var myArray = [1, 2, 3, 4, 5];
+    var firstElement = firstOfArray(myArray);
+    console.log("First Element:", firstElement);
+  </script>
+</body>
+</html>

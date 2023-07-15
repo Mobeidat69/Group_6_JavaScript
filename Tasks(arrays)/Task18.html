@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shortest String in Array</title>
+  
+</head>
+<body>
+  <h1>Shortest String in Array</h1>
+  <p>Open the browser console to see the results.</p>
+  <script>
+    // Using a for loop
+    function shorterInArrayForLoop(strings) {
+      let shortest = strings[0];
+
+      for (let i = 1; i < strings.length; i++) {
+        if (strings[i].length < shortest.length) {
+          shortest = strings[i];
+        }
+      }
+
+      return shortest;
+    }
+
+    // Using a while loop
+    function shorterInArrayWhileLoop(strings) {
+      let shortest = strings[0];
+      let i = 1;
+
+      while (i < strings.length) {
+        if (strings[i].length < shortest.length) {
+          shortest = strings[i];
+        }
+        i++;
+      }
+
+      return shortest;
+    }
+
+    // Example usage with for loop
+    var strings1 = ["alex", "mercer", "madrasa", "rashed2", "emad", "hala"];
+    console.log("Using for loop:", shorterInArrayForLoop(strings1));
+
+    // Example usage with while loop
+    var strings2 = ["alex", "mercer", "madrasa", "rashed2", "emad", "hala"];
+    console.log("Using while loop:", shorterInArrayWhileLoop(strings2));
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Power of Element Index</title>
+  
+</head>
+<body>
+  <h1>Power of Element Index</h1>
+  <p>Open the browser console to see the results.</p>
+  <script>
+    // Using a for loop
+    function powerElementIndexForLoop(nums) {
+      const result = [];
+
+      for (let i = 0; i < nums.length; i++) {
+        result.push(Math.pow(nums[i], i));
+      }
+
+      return result;
+    }
+
+    // Using a while loop
+    function powerElementIndexWhileLoop(nums) {
+      const result = [];
+      let i = 0;
+
+      while (i < nums.length) {
+        result.push(Math.pow(nums[i], i));
+        i++;
+      }
+
+      return result;
+    }
+
+    // Example usage with for loop
+    var nums1 = [44, 5, 4, 3, 2, 10];
+    console.log("Using for loop:", powerElementIndexForLoop(nums1));
+
+    // Example usage with while loop
+    var nums2 = [44, 5, 4, 3, 2, 10];
+    console.log("Using while loop:", powerElementIndexWhileLoop(nums2));
+  </script>
+</body>
+</html>

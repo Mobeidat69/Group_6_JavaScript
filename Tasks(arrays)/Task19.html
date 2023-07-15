@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Repeat Character in String</title>
+  
+</head>
+<body>
+  <h1>Repeat Character in String</h1>
+  <p>Open the browser console to see the results.</p>
+  <script>
+    // Using a for loop
+    function repeatCharForLoop(string, char) {
+      let count = 0;
+
+      for (let i = 0; i < string.length; i++) {
+        if (string[i] === char) {
+          count++;
+        }
+      }
+
+      return count;
+    }
+
+    // Using a while loop
+    function repeatCharWhileLoop(string, char) {
+      let count = 0;
+      let i = 0;
+
+      while (i < string.length) {
+        if (string[i] === char) {
+          count++;
+        }
+        i++;
+      }
+
+      return count;
+    }
+
+    // Example usage with for loop
+    var string1 = "alex mercer madrasa rashed2 emad hala";
+    console.log("Using for loop:", repeatCharForLoop(string1, "a"));
+
+    // Example usage with while loop
+    var string2 = "alex mercer madrasa rashed2 emad hala";
+    console.log("Using while loop:", repeatCharWhileLoop(string2, "z"));
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Even Index Odd Length</title>
+ 
+</head>
+<body>
+  <h1>Even Index Odd Length</h1>
+  <p>Open the browser console to see the results.</p>
+  <script>
+    // Using a for loop
+    function evenIndexOddLengthForLoop(strings) {
+      const result = [];
+
+      for (let i = 0; i < strings.length; i += 2) {
+        if (strings[i].length % 2 === 1) {
+          result.push(strings[i]);
+        }
+      }
+
+      return result;
+    }
+
+    // Using a while loop
+    function evenIndexOddLengthWhileLoop(strings) {
+      const result = [];
+      let i = 0;
+
+      while (i < strings.length) {
+        if (i % 2 === 0 && strings[i].length % 2 === 1) {
+          result.push(strings[i]);
+        }
+        i++;
+      }
+
+      return result;
+    }
+
+    // Example usage with for loop
+    var strings1 = ["alex", "mercer", "madrasa", "rashed2", "emad", "hala"];
+    console.log("Using for loop:", evenIndexOddLengthForLoop(strings1));
+
+    // Example usage with while loop
+    var strings2 = ["alex", "mercer", "madrasa", "rashed2", "emad", "hala"];
+    console.log("Using while loop:", evenIndexOddLengthWhileLoop(strings2));
+  </script>
+</body>
+</html>

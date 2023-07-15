@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Index of Array</title>
+  
+</head>
+<body>
+  <h1>Index of Array</h1>
+  <p>Open the browser console to see the results.</p>
+  <script>
+    function indexOfArray(array, index) {
+      if (index >= 0 && index < array.length) {
+        return array[index];
+      } else {
+        return undefined; // Return undefined if the index is out of bounds
+      }
+    }
+
+    // Example usage:
+    var nums = [1, 2, 3, 8, 9];
+    console.log(indexOfArray(nums, 3)); // Output: 8
+    console.log(indexOfArray(nums, 1)); // Output: 2
+    console.log(indexOfArray(nums, 4)); // Output: 9
+  </script>
+</body>
+</html>
