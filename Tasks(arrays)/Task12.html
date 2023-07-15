@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add to End Example</title>
+</head>
+<body>
+  <h1>Add to End Example</h1>
+  <label for="valueInput">Enter a value:</label>
+  <input type="number" id="valueInput">
+  <button onclick="handleClick()">Add to End</button>
+  <p id="output"></p>
+
+  <script>
+    function addToEnd(array, value) {
+      array.push(value);
+      return array;
+    }
+
+    function handleClick() {
+      var nums = [1, 2, 3, 8, 9];
+      var value = parseInt(document.getElementById("valueInput").value);
+      var result = addToEnd(nums, value);
+      document.getElementById("output").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

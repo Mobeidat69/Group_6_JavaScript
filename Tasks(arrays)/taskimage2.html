@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           .yellow-div {
+        display: inline-block;
+        background-color: rgb(221, 255, 0);
+        width: 400px;
+        height: 100px;
+        border: 2px solid black;
+        font-weight: bolder;
+      }
+    </style>
+</head>
+<body>
+    <script>
+        let newDiv = document.createElement('div')
+        
+        newDiv.className = 'yellow-div';
+        
+        newDiv.textContent = 'Hello world!';
+        newDiv.style.fontSize=('xxx-large')
+        newDiv.style.textAlign=('center')
+        newDiv.style.paddingTop=('10px')
+        document.body.appendChild(newDiv);
+
+    </script>
+</body>
+</html>

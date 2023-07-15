@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Odd Elements in Array Example</title>
+  
+</head>
+<body>
+  <h1>Odd Elements in Array Example</h1>
+  <button onclick="handleForLoopClick()">Find Odd Elements (For Loop)</button>
+  <p id="outputForLoop"></p>
+  <button onclick="handleWhileLoopClick()">Find Odd Elements (While Loop)</button>
+  <p id="outputWhileLoop"></p>
+  <script>
+    // Implementation using a for loop
+    function oddArrayForLoop(array) {
+      var result = [];
+      for (var i = 0; i < array.length; i++) {
+        if (array[i] % 2 !== 0) {
+          result.push(array[i]);
+        }
+      }
+      return result;
+    }
+
+    // Implementation using a while loop
+    function oddArrayWhileLoop(array) {
+      var result = [];
+      var i = 0;
+      while (i < array.length) {
+        if (array[i] % 2 !== 0) {
+          result.push(array[i]);
+        }
+        i++;
+      }
+      return result;
+    }
+
+    function handleForLoopClick() {
+      var nums = [1, 2, 3, 8, 9];
+      var result = oddArrayForLoop(nums);
+      document.getElementById("outputForLoop").innerHTML = result;
+    }
+
+    function handleWhileLoopClick() {
+      var nums = [1, 2, 3, 8, 9];
+      var result = oddArrayWhileLoop(nums);
+      document.getElementById("outputWhileLoop").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

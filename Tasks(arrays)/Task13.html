@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum Array Example</title>
+ 
+</head>
+<body>
+  <h1>Sum Array Example</h1>
+  <button onclick="handleForLoopClick()">Calculate Sum (For Loop)</button>
+  <p id="outputForLoop"></p>
+  <button onclick="handleWhileLoopClick()">Calculate Sum (While Loop)</button>
+  <p id="outputWhileLoop"></p>
+  <script>
+    // Implementation using a for loop
+    function sumArrayForLoop(array) {
+      var sum = 0;
+      for (var i = 0; i < array.length; i++) {
+        sum += array[i];
+      }
+      return sum;
+    }
+
+    // Implementation using a while loop
+    function sumArrayWhileLoop(array) {
+      var sum = 0;
+      var i = 0;
+      while (i < array.length) {
+        sum += array[i];
+        i++;
+      }
+      return sum;
+    }
+
+    function handleForLoopClick() {
+      var nums = [3, 4, 5, 15, 23];
+      var result = sumArrayForLoop(nums);
+      document.getElementById("outputForLoop").innerHTML = result;
+    }
+
+    function handleWhileLoopClick() {
+      var nums = [3, 4, 5, 15, 23];
+      var result = sumArrayWhileLoop(nums);
+      document.getElementById("outputWhileLoop").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

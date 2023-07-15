@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /*  */
+  </style>
+</head>
+<body><div><select id="myDropdown" onchange="changePicture()">
+  <option value="default">Select</option>
+  <option value="1">USA</option>
+  <option value="2">Norway</option>
+  <option value="3">Jordan</option>
+  <option value="4">Jamaica</option>
+  <option value="5">UK</option>
+  <option value="6">Saudi Arabia</option>
+  <option value="7">Ukraine</option>
+  
+</select>
+<img id="selectedImage" src="../images/default.png" alt="" style="height: 200px; width: 200px;">
+</div>
+  
+  <script>
+    function changePicture() {
+      var dropdown = document.getElementById("myDropdown");
+      
+      var imageElement = document.getElementById("selectedImage");
+      var selectedValue = dropdown.value;
+      switch (selectedValue) {
+       
+        case "1":
+          imageElement.src = "../images/USA.png";
+          imageElement.style.height='250px'
+          imageElement.style.width='450px'
+
+          break;
+        case "2":
+          imageElement.src = "../images/Norway.webp";
+          imageElement.style.height='250px'
+          imageElement.style.width='450px'
+          break;
+        case "3":
+          imageElement.src = "../images/Jordan.webp";
+          imageElement.style.height='250px'
+          imageElement.style.width='450px'
+          break;
+        case "4":
+          imageElement.src = "../images/Jamaica.png";
+          imageElement.style.height='250px'
+          imageElement.style.width='450px'
+          break;
+        case "5":
+          imageElement.src = "../images/UK.webp";
+          imageElement.style.height='250px'
+          imageElement.style.width='450px'
+          break;
+        case "6":
+          imageElement.src = "../images/KSA.webp";
+          imageElement.style.height='250px'
+          imageElement.style.width='450px'
+          break;
+          case "7":
+          imageElement.src = "../images/Ukraine.webp";
+          imageElement.style.height='250px'
+          imageElement.style.width='450px'
+          break;
+          default:
+          imageElement.src = "../images/default.png";
+          imageElement.style.height='200px'
+          imageElement.style.width='200px'
+          break;
+        
+      }
+    }
+  </script>
+</body>
+</html>

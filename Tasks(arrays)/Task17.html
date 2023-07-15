@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Average of Array Example</title>
+  
+</head>
+<body>
+  <h1>Average of Array Example</h1>
+  <label for="arrayInput">Enter the array values (comma-separated):</label>
+  <input type="text" id="arrayInput">
+  <button onclick="aveArray()">Calculate Average</button>
+  <p id="output"></p>
+  <script>
+    function aveArray() {
+      var input = document.getElementById("arrayInput").value;
+      var array = input.split(",").map(Number);
+      
+      var sum = 0;
+      for (var i = 0; i < array.length; i++) {
+        sum += array[i];
+      }
+      var average = sum / array.length;
+      
+      document.getElementById("output").innerHTML = average;
+    }
+  </script>
+</body>
+</html>

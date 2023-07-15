@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove Element from Array Example</title>
+ 
+</head>
+<body>
+  <h1>Remove Element from Array Example</h1>
+  <label for="elementInput">Enter element to remove:</label>
+  <input type="number" id="elementInput">
+  <br>
+  <button onclick="handleForLoopClick()">Remove (For Loop)</button>
+  <p id="outputForLoop"></p>
+  <button onclick="handleWhileLoopClick()">Remove (While Loop)</button>
+  <p id="outputWhileLoop"></p>
+  <script>
+    // Implementation using a for loop
+    function removeFromArrayForLoop(array, element) {
+      var result = [];
+      for (var i = 0; i < array.length; i++) {
+        if (array[i] !== element) {
+          result.push(array[i]);
+        }
+      }
+      return result;
+    }
+
+    // Implementation using a while loop
+    function removeFromArrayWhileLoop(array, element) {
+      var result = [];
+      var i = 0;
+      while (i < array.length) {
+        if (array[i] !== element) {
+          result.push(array[i]);
+        }
+        i++;
+      }
+      return result;
+    }
+
+    function handleForLoopClick() {
+      var nums = [1, 2, 3, 8, 9];
+      var element = parseInt(document.getElementById("elementInput").value);
+      var result = removeFromArrayForLoop(nums, element);
+      document.getElementById("outputForLoop").innerHTML = result;
+    }
+
+    function handleWhileLoopClick() {
+      var nums = [1, 2, 3, 8, 9];
+      var element = parseInt(document.getElementById("elementInput").value);
+      var result = removeFromArrayWhileLoop(nums, element);
+      document.getElementById("outputWhileLoop").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

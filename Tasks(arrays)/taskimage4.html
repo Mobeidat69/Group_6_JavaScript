@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            display: inline-block;
+            width: 400px;
+            height: 100px;
+            border: 2px solid black;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label>Text Size: <input type="number" id="textSizeInput" min="0" onchange="changeStyle()"></label>
+        <label>Font Family: <input type="text" id="fontFamilyInput" onchange="changeStyle()"></label>
+        <label><input type="checkbox" id="boldCheckbox" onchange="changeStyle()"> Bold</label>
+        <label><input type="checkbox" id="italicCheckbox" onchange="changeStyle()"> Italic</label>
+        <label><input type="checkbox" id="underlineCheckbox" onchange="changeStyle()"> Underline</label>
+    </div>
+
+    <div id="contentDiv" class="div">
+        the brown fox jumps over the lazy dog
+    </div>
+
+    <script>
+        function changeStyle() {
+            var boldCheckbox = document.getElementById('boldCheckbox');
+            var italicCheckbox = document.getElementById('italicCheckbox');
+            var underlineCheckbox = document.getElementById('underlineCheckbox');
+            var textSizeInput = document.getElementById('textSizeInput');
+            var fontFamilyInput = document.getElementById('fontFamilyInput');
+            var contentDiv = document.getElementById('contentDiv');
+
+            contentDiv.style.fontWeight = boldCheckbox.checked ? 'bold' : 'normal';
+            contentDiv.style.fontStyle = italicCheckbox.checked ? 'italic' : 'normal';
+            contentDiv.style.textDecoration = underlineCheckbox.checked ? 'underline' : 'none';
+            contentDiv.style.fontSize = textSizeInput.value + 'px';
+            contentDiv.style.fontFamily = fontFamilyInput.value;
+    
+        }
+    </script>
+</body>
+</html>
