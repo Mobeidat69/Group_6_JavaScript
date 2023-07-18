@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Double Values Example</title>
+</head>
+<body>
+  <h1>Double Values Example</h1>
+
+  <script>
+    function doubleValues(array) {
+      return array.map(function(value) {
+        return value * 2;
+      });
+    }
+
+    var inputArray = [1, 2, 3, 4, 5];
+    var resultArray = doubleValues(inputArray);
+    console.log(resultArray);
+  </script>
+</body>
+</html>

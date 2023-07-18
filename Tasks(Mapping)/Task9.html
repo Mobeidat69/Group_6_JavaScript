@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Extract Key Example</title>
+</head>
+<body>
+  <h1>Extract Key Example</h1>
+
+  <script>
+    function extractKey(array, key) {
+      return array.map(function(obj) {
+        return obj[key];
+      });
+    }
+
+    var inputArray = [
+      { name: 'Elie' },
+      { name: 'Tim' },
+      { name: 'Matt' },
+      { name: 'Colt' },
+      { name: 'Viola'},
+      { name: 'Mohammed'},
+      { name: 'Ziad'}
+    ];
+
+    var resultArray = extractKey(inputArray, 'name');
+    console.log(resultArray);
+  </script>
+</body>
+</html>

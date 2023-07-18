@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Compare Objects Example</title>
+</head>
+<body>
+  <h1>Compare Objects Example</h1>
+
+  <script>
+    function compareObjects(obj1, obj2) {
+      var keys = Object.keys(obj1);
+
+      for (var i = 0; i < keys.length; i++) {
+        var key = keys[i];
+        if (obj1[key] !== obj2[key]) {
+          return false;
+        }
+      }
+
+      var obj2Keys = Object.keys(obj2);
+      for (var j = 0; j < obj2Keys.length; j++) {
+        var obj2Key = obj2Keys[j];
+        if (!obj1.hasOwnProperty(obj2Key)) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    var obj1 = { name: "John", age: 25, city: "New York" };
+    var obj2 = { name: "John", age: 25, city: "New York" };
+    var obj3 = { name: "Alice", age: 30, city: "London" };
+
+    console.log(compareObjects(obj1, obj2)); // true
+    console.log(compareObjects(obj1, obj3)); // false
+  </script>
+</body>
+</html>

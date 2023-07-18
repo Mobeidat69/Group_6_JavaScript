@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Doubled Array Example</title>
+</head>
+<body>
+  <h1>Doubled Array Example</h1>
+
+  <script>
+    const doubleArrayElements = (arr) => {
+      const doubledArray = arr.map(num => num * 2);
+      return doubledArray;
+    }
+
+    const numbers = [1, 2, 3, 4, 5];
+    const doubledNumbers = doubleArrayElements(numbers);
+
+    console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+  </script>
+</body>
+</html>

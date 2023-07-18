@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Enter the Matrix</title>
+</head>
+<body>
+  <h1>Enter the Matrix</h1>
+
+  <script>
+    function extractNames(array) {
+  return array.map(function(obj) {
+    return obj.name;
+  });
+}
+
+var people = [
+  {
+    name: "Angelina Jolie",
+    age: 80
+  },
+  {
+    name: "Eric Jones",
+    age: 2
+  },
+  {
+    name: "Paris Hilton",
+    age: 5
+  },
+  {
+    name: "Kayne West",
+    age: 16
+  },
+  {
+    name: "Bob Ziroll",
+    age: 100
+  }
+];
+
+var names = extractNames(people);
+
+names.map(function(name) {
+  var person = people.find(function(obj) {
+    return obj.name === name;
+  });
+
+  if (person.age <= 17) {
+    console.log(name + " is under age!");
+  } else {
+    console.log(name + " can go to the Matrix");
+  }
+});
+
+console.log(names);
+
+  </script>
+</body>
+</html>

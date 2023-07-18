@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>extractNames</title>
+</head>
+<body>
+  <h1>extractNames</h1>
+
+  <script>
+    function extractNames(array) {
+  var namesArray = array.map(function(obj) {
+    return obj.name;
+  });
+
+  return namesArray;
+}
+var people = [
+  {
+    name: "Angelina Jolie",
+    age: 80
+  },
+  {
+    name: "Eric Jones",
+    age: 2
+  },
+  {
+    name: "Paris Hilton",
+    age: 5
+  },
+  {
+    name: "Kayne West",
+    age: 16
+  },
+  {
+    name: "Bob Ziroll",
+    age: 100
+  }
+];
+
+var names = extractNames(people);
+
+console.log(names);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>valTimesIndex</title>
+</head>
+<body>
+  <h1>valTimesIndex</h1>
+
+  <script>
+    function valTimesIndex(array) {
+  var newArray = array.map(function(value, index) {
+    return value * index;
+  });
+  
+  return newArray;
+}
+
+// Example usage
+var inputArray = [2, 4, 6, 8];
+var resultArray = valTimesIndex(inputArray);
+console.log(resultArray);
+
+
+  </script>
+</body>
+</html>

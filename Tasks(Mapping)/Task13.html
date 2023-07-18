@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>show First And Last</title>
+</head>
+<body>
+  <h1>show First And Last</h1>
+
+  <script>
+    function showFirstAndLast(array) {
+  return array.map(function(string) {
+    var firstChar = string.charAt(0);
+    var lastChar = string.charAt(string.length - 1);
+    return firstChar + lastChar;
+  });
+}
+
+// Example usage
+var inputArray = ["hello", "world", "open", "ai"];
+var resultArray = showFirstAndLast(inputArray);
+console.log(resultArray);
+
+  </script>
+</body>
+</html>

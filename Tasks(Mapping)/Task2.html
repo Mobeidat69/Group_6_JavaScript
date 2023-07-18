@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>num to str Example</title>
+</head>
+<body>
+  <h1>num to str Example</h1>
+
+  <script>
+    const stringit = (arr) => {
+      const doubledArray = arr.map(num => num.toString());
+      return doubledArray;
+    }
+
+    const numbers = [1, 2, 3, 4, 5];
+    const Stringed = stringit(numbers);
+
+    console.log(Stringed); // Output: [2, 4, 6, 8, 10]
+  </script>
+</body>
+</html>
