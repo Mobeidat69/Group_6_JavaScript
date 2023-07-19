@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV to 2D Array of Objects Example</title>
+</head>
+<body>
+  <h1>CSV to 2D Array of Objects Example</h1>
+
+  <textarea id="csvData" rows="10" cols="50" placeholder="Enter CSV data"></textarea>
+  <br>
+  <button id="convertButton">Convert</button>
+
+  <table id="resultTable">
+    <thead id="tableHead"></thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script>
+    function csvTo2DArrayOfObjects(csvString) {
+      var rows = csvString.split('\n');
+      var titles = rows[0].split(',');
+      var result = [];
+
+      for (var i = 1; i < rows.length; i++) {
+        var row = rows[i].trim();
+
+        if (row !== '') {
+          var cells = row.split(',');
+          var obj = {};
+
+          for (var j = 0; j < titles.length; j++) {
+            obj[titles[j]] = cells[j];
+          }
+
+          result.push(obj);
+        }
+      }
+
+      return result;
+    }
+
+    var convertButton = document.getElementById("convertButton");
+    convertButton.addEventListener("click", function() {
+      var csvDataInput = document.getElementById("csvData");
+      var csvData = csvDataInput.value;
+      var convertedArray = csvTo2DArrayOfObjects(csvData);
+      displayTable(convertedArray);
+    });
+
+    function displayTable(data) {
+      var tableHead = document.getElementById("tableHead");
+      var tableBody = document.getElementById("tableBody");
+
+      // Clear previous table data
+      tableHead.innerHTML = "";
+      tableBody.innerHTML = "";
+
+      // Create table header
+      var headerRow = document.createElement("tr");
+      Object.keys(data[0]).forEach(function(key) {
+        var th = document.createElement("th");
+        th.textContent = key;
+        headerRow.appendChild(th);
+      });
+      tableHead.appendChild(headerRow);
+
+      // Create table rows
+      data.forEach(function(rowObj) {
+        var row = document.createElement("tr");
+        Object.values(rowObj).forEach(function(value) {
+          var cell = document.createElement("td");
+          cell.textContent = value;
+          row.appendChild(cell);
+        });
+        tableBody.appendChild(row);
+      });
+    }
+  </script>
+</body>
+</html>

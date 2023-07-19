@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV to 2D Array Example</title>
+</head>
+<body>
+  <h1>CSV to 2D Array Example</h1>
+
+  <textarea id="csvData" rows="10" cols="50" placeholder="Enter CSV data"></textarea>
+  <br>
+  <button id="convertButton">Convert</button>
+
+  <script>
+    function csvTo2DArray(csvString) {
+      var rows = csvString.split('\n');
+      var result = [];
+
+      for (var i = 0; i < rows.length; i++) {
+        var row = rows[i].trim();
+        
+        if (row !== '') {
+          var cells = row.split(',');
+          result.push(cells);
+        }
+      }
+
+      return result;
+    }
+
+    var convertButton = document.getElementById("convertButton");
+    convertButton.addEventListener("click", function() {
+      var csvDataInput = document.getElementById("csvData");
+      var csvData = csvDataInput.value;
+      var convertedArray = csvTo2DArray(csvData);
+      console.log(convertedArray);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Byte Length Example</title>
+</head>
+<body>
+  <h1>String Byte Length Example</h1>
+
+  <label for="inputString">Enter a string:</label>
+  <input type="text" id="inputString">
+  <button id="calculateButton">Calculate Byte Length</button>
+  <p id="byteLengthResult"></p>
+
+  <script>
+    function getStringByteLength(str) {
+      const encoder = new TextEncoder();
+      const encodedString = encoder.encode(str);
+      const byteLength = encodedString.byteLength;
+      return byteLength;
+    }
+
+    const calculateButton = document.getElementById("calculateButton");
+    calculateButton.addEventListener("click", function() {
+      const inputString = document.getElementById("inputString").value;
+      const byteLength = getStringByteLength(inputString);
+      document.getElementById("byteLengthResult").textContent = "Byte length: " + byteLength;
+    });
+  </script>
+</body>
+</html>

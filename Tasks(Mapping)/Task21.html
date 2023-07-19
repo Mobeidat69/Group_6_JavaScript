@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Execution Time Measurement Example</title>
+</head>
+<body>
+  <h1>Function Execution Time Measurement Example</h1>
+
+  <button id="executeButton">Execute Function</button>
+
+  <script>
+    function measureExecutionTime(func) {
+      console.time('Execution Time');
+      func();
+      console.timeEnd('Execution Time');
+    }
+
+    // Example function to measure execution time
+    function exampleFunction() {
+      // Simulate some time-consuming operation
+      for (let i = 0; i < 1000000000; i++) {
+        // Perform some computation
+      }
+    }
+
+    var executeButton = document.getElementById("executeButton");
+    executeButton.addEventListener("click", function() {
+      measureExecutionTime(exampleFunction);
+    });
+  </script>
+</body>
+</html>
